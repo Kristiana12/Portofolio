@@ -1,0 +1,152 @@
+.section-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1.5rem;
+}
+
+.section-contact .section-title {
+  margin-bottom: 3rem;
+}
+
+.contact__content--title {
+  font-size: var(--font-size-heading-s);
+  margin: 1.3rem auto;
+}
+
+.section-contact .contact__content {
+  max-width: 445px;
+}
+
+/* CONTACT FORM */
+
+#contact__form {
+  margin-bottom: 3rem;
+}
+
+.contact__form--inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  border-radius: 40px;
+  background-color: var(--color-bg-primary);
+  position: relative;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.contact__form--inputs::before {
+  content: '';
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  top: -0.5%;
+  left: -0.5%;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-secondary),
+    var(--color-secondary)
+  );
+  border-radius: 40px;
+  z-index: -1;
+}
+
+.contact__form--inputs input,
+.contact__form--inputs textarea {
+  padding: 1rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-family: inherit;
+  background-color: var(--color-glassmorphism-light);
+  color: var(--color-white-m);
+  transition: border-color 0.3s;
+}
+
+.contact__form--inputs input.error,
+.contact__form--inputs textarea.error {
+  border-color: crimson;
+}
+
+.contact__form--inputs input:focus,
+.contact__form--inputs textarea:focus {
+  outline: 2px solid var(--color-secondary-m);
+}
+
+.contact__form--inputs #name,
+.contact__form--inputs #email {
+  flex: 1;
+}
+
+.contact__form--inputs #subject,
+.contact__form--inputs #message {
+  width: 100%;
+}
+
+/* BUBBLES */
+.bubble-contact-s {
+  width: 40px;
+  top: 110px;
+  right: 0;
+}
+.bubble-contact-m {
+  width: 30px;
+  top: 20px;
+  left: 0;
+}
+.bubble-contact-l {
+  width: 40px;
+  bottom: 50px;
+  right: 30px;
+}
+.bubble-contact-xl {
+  width: 50px;
+  bottom: 52%;
+  left: 0;
+}
+
+/* Placeholder Color */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-white-m);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-white-m);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-white-m);
+}
+
+/* MEDIA QUERY MIN-WIDTH: 768px */
+@media only screen and (min-width: 768px) {
+  /* BUBBLES */
+  .bubble-contact-s {
+    width: 40px;
+    top: 140px;
+    right: 20%;
+  }
+  .bubble-contact-m {
+    width: 30px;
+    top: 20px;
+    left: 20%;
+  }
+  .bubble-contact-l {
+    width: 40px;
+    bottom: 50px;
+    right: 30%;
+  }
+  .bubble-contact-xl {
+    width: 50px;
+    bottom: 58%;
+    left: 0;
+  }
+}
